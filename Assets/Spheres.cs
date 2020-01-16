@@ -5,28 +5,30 @@ using UnityEngine;
 public class Spheres : MonoBehaviour
 {
     public GameObject Sphere;
+    public int amount = 2000;
+    List<GameObject> spherePool;
 
     void Start()
     {
-        //for (int x= -10; x<10; x++)
-        //{
-        //    for (int y = -10; y < 10; y++)
-        //    {
-        //        for (int z = -10; z < 10; z++)
-        //        {
-        //            Instantiate(Sphere, new Vector3(x, y, z), Quaternion.identity);
-        //        }
-        //    }
-        //}
+        spherePool = new List<GameObject>();
 
-        for (int i = 0; i < 2000; i++)
+        for (int i = 0; i < amount; i++)
         {
-            Instantiate(Sphere, new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f)), Quaternion.identity);
-        } 
+            GameObject sp = (GameObject)Instantiate(Sphere, new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f)), Quaternion.identity);
+            spherePool.Add(sp);
+        }
+
+        InvokeRepeating("MoveSphere", 0f, 3f);
     }
 
-    void Update()
+    void MoveSphere()
     {
-        
+        for (int i = 0; i < amount; i++)
+        {
+            spherePool[i].SetActive(false);
+            spherePool[i].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
+            spherePool[i].SetActive(true);
+        }
     }
+
 }
