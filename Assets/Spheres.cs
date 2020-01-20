@@ -6,6 +6,8 @@ public class Spheres : MonoBehaviour
 {
     public GameObject Sphere;
     public int amount = 2000;
+    public float lifetime = 0.3f;
+    public int x;
     List<GameObject> spherePool;
 
     void Start()
@@ -18,16 +20,18 @@ public class Spheres : MonoBehaviour
             spherePool.Add(sp);
         }
 
-        InvokeRepeating("MoveSphere", 0f, 3f);
+        InvokeRepeating("MoveSphere", 0f, lifetime);
+        //InvokeRepeating("RefreshTags", 0f, 3f);
     }
 
     void MoveSphere()
     {
-        for (int i = 0; i < amount; i++)
+        for (int i = 1; i < amount/100; i++)
         {
-            spherePool[i].SetActive(false);
-            spherePool[i].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
-            spherePool[i].SetActive(true);
+            x = amount % (Random.Range(1, amount));
+            spherePool[x].SetActive(false);
+            spherePool[x].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
+            spherePool[x].SetActive(true);
         }
     }
 
