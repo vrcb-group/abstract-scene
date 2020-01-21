@@ -20,18 +20,27 @@ public class Spheres : MonoBehaviour
             spherePool.Add(sp);
         }
 
-        InvokeRepeating("MoveSphere", 0f, lifetime);
-        //InvokeRepeating("RefreshTags", 0f, 3f);
+        InvokeRepeating("MoveSphere1", 0, 0.3f);
+        InvokeRepeating("MoveSphere2", 0.5f, 0.5f);
     }
 
-    void MoveSphere()
+    void MoveSphere1()
     {
-        for (int i = 1; i < amount/100; i++)
+        for (int i = 1; i < amount/2; i++)
         {
-            x = amount % (Random.Range(1, amount));
-            spherePool[x].SetActive(false);
-            spherePool[x].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
-            spherePool[x].SetActive(true);
+            spherePool[i].SetActive(false);
+            spherePool[i].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
+            spherePool[i].SetActive(true);
+        }
+    }
+
+    void MoveSphere2()
+    {
+        for (int i = amount/2; i < amount; i++)
+        {
+            spherePool[i].SetActive(false);
+            spherePool[i].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
+            spherePool[i].SetActive(true);
         }
     }
 
