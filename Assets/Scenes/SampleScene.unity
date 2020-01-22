@@ -164,7 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sphere: {fileID: 220943525610379377, guid: 762108d4860be374e9c07bac751561e0, type: 3}
-  amount: 2000
+  amount: 3000
+  lifetime: 0.3
+  x: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

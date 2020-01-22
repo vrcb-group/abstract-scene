@@ -6,8 +6,6 @@ public class Spheres : MonoBehaviour
 {
     public GameObject Sphere;
     public int amount = 2000;
-    public float lifetime = 0.3f;
-    public int x;
     List<GameObject> spherePool;
 
     void Start()
@@ -20,27 +18,24 @@ public class Spheres : MonoBehaviour
             spherePool.Add(sp);
         }
 
-        InvokeRepeating("MoveSphere1", 0, 0.3f);
-        InvokeRepeating("MoveSphere2", 0.5f, 0.5f);
+        StartCoroutine("BlinkSpheres");
     }
 
-    void MoveSphere1()
+    private IEnumerator BlinkSpheres()
     {
-        for (int i = 1; i < amount/2; i++)
+        while(true)
         {
-            spherePool[i].SetActive(false);
-            spherePool[i].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
-            spherePool[i].SetActive(true);
-        }
-    }
-
-    void MoveSphere2()
-    {
-        for (int i = amount/2; i < amount; i++)
-        {
-            spherePool[i].SetActive(false);
-            spherePool[i].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
-            spherePool[i].SetActive(true);
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = i*(amount/20); j < (i+1)*(amount/20); j++)
+                {
+                    spherePool[j].SetActive(false);
+                    spherePool[j].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
+                    spherePool[j].SetActive(true);
+                }
+                //Debug.Log(System.DateTime.Now);
+                yield return new WaitForSeconds(0.01f);
+            }   
         }
     }
 
