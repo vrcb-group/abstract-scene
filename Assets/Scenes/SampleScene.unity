@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sphere: {fileID: 220943525610379377, guid: 762108d4860be374e9c07bac751561e0, type: 3}
+  spheres: 0
   amount: 3000
 --- !u!1 &963194225
 GameObject:
