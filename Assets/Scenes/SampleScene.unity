@@ -165,8 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sphere: {fileID: 220943525610379377, guid: 762108d4860be374e9c07bac751561e0, type: 3}
   amount: 3000
-  lifetime: 0.3
-  x: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rod: {fileID: 1764799527697764759, guid: d48982ca623411649a6385b55fea53fd, type: 3}
+  rods: 1
 --- !u!4 &1906154990
 Transform:
   m_ObjectHideFlags: 0
