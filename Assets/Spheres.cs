@@ -16,7 +16,7 @@ public class Spheres : MonoBehaviour
             spherePool = new List<GameObject>();
             for (int i = 0; i < amount; i++)
             {
-                GameObject sp = (GameObject)Instantiate(Sphere, new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f)), Quaternion.identity);
+                GameObject sp = (GameObject)Instantiate(Sphere, new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-11.0f, 15.0f), Random.Range(-7.0f, 13.0f)), Quaternion.identity);
                 sp.SetActive(true);
                 spherePool.Add(sp);
             }
