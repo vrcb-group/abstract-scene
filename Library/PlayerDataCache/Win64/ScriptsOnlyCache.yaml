@@ -157,7 +157,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: b2823d89e3ca97f2967f8ad0fc915fbe
+      Hash: 8a97e8a905d915bc2d9152a8df7f464d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Rods
@@ -397,7 +397,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 341d19fc23421a105963cd5c06092a53
+      Hash: 20863a849f41e654399348e8404bb549
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spheres
@@ -506,4 +506,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Unity/Compiled/Limited Lifetime/AbstractScene.exe
+  playerPath: C:/Unity/Compiled/Rods/AbstractScene.exe
