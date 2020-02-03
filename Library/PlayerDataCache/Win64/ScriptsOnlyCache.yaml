@@ -506,4 +506,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Unity/Compiled/Only Spheres/AbstractScene.exe
+  playerPath: C:/Unity/Compiled/VR2/2. Random Spheres/AbstractScene.exe
