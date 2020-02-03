@@ -39,9 +39,9 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10024}
+      Script: {instanceID: 10038}
     - Class: 114
-      Script: {instanceID: 11280}
+      Script: {instanceID: 11304}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -506,4 +506,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Unity/Compiled/Rods/AbstractScene.exe
+  playerPath: C:/Users/hprc-pcl VR/Desktop/AbstractScene.exe
