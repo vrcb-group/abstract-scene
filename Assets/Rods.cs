@@ -10,14 +10,19 @@ public class Rods : MonoBehaviour
 
     void Start()
     {
-        if(rods)
+        if (rods)
         {
             for (int j = 0; j < z_position.Length; j++)
             {
-                Instantiate(Rod, new Vector3(10.0f, 0, z_position[j]), Quaternion.identity);
-                Instantiate(Rod, new Vector3(10.0f, 0, -z_position[j]), Quaternion.identity);
-                Instantiate(Rod, new Vector3(-10.0f, 0, z_position[j]), Quaternion.identity);
-                Instantiate(Rod, new Vector3(-10.0f, 0, -z_position[j]), Quaternion.identity);
+                GameObject r1 = (GameObject)Instantiate(Rod, new Vector3(10.0f, 0, z_position[j]), Quaternion.identity);
+                GameObject r2 = (GameObject)Instantiate(Rod, new Vector3(10.0f, 0, -z_position[j]), Quaternion.identity);
+                GameObject r3 = (GameObject)Instantiate(Rod, new Vector3(-10.0f, 0, z_position[j]), Quaternion.identity);
+                GameObject r4 = (GameObject)Instantiate(Rod, new Vector3(-10.0f, 0, -z_position[j]), Quaternion.identity);
+
+                r1.transform.parent = GameObject.Find("Main Camera").transform;
+                r2.transform.parent = GameObject.Find("Main Camera").transform;
+                r3.transform.parent = GameObject.Find("Main Camera").transform;
+                r4.transform.parent = GameObject.Find("Main Camera").transform;
             }
         }
     }
