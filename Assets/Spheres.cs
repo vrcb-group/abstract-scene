@@ -27,13 +27,17 @@ public class Spheres : MonoBehaviour
     {
         while(true)
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 20  ; i++)
             {
                 for (int j = i*(amount/20); j < (i+1)*(amount/20); j++)
                 {
                     spherePool[j].SetActive(false);
                     spherePool[j].transform.position = new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-11.0f, 15.0f), Random.Range(-7.0f, 13.0f));
                     spherePool[j].SetActive(true);
+                    if(j==300)
+                    {
+                        Debug.Log(System.DateTime.Now.Millisecond);
+                    }
                 }
                 //Debug.Log(System.DateTime.Now);
                 yield return new WaitForSeconds(0f);
