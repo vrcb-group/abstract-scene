@@ -292,6 +292,9 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Unity/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>C:/Unity/abstract-scene/Assets/Plugins/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Unity/abstract-scene/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -300,9 +303,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/Unity/abstract-scene/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Unity/abstract-scene/Assets/Plugins/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Unity/2019.2.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
