@@ -397,7 +397,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 20863a849f41e654399348e8404bb549
+      Hash: c88d551bc4c93b5063d485455b215d25
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spheres
@@ -506,4 +506,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Unity/Compiled/Baseline Blank Scene/AbstractScene.exe
+  playerPath: C:/Unity/Compiled/VR3/300/AbstractScene.exe
