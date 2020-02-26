@@ -82,8 +82,9 @@ public class Spheres : MonoBehaviour
                 //Debug.Log(System.DateTime.Now.Millisecond);
                 //Debug.Log(wait_time);   
 
+                Debug.Log(System.DateTime.Now.Millisecond);
                 yield return new WaitForSeconds(wait_time);
-                                   
+                Debug.Log(System.DateTime.Now.Millisecond);
             }
 
             diff = System.DateTime.Now.Millisecond - loop_start;
@@ -91,7 +92,7 @@ public class Spheres : MonoBehaviour
             {
                 diff = diff + 1000;
             }
-            Debug.Log(diff);
+            //Debug.Log(diff);
         }
     }
 
