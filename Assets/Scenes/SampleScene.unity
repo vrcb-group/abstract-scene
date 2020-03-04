@@ -167,7 +167,7 @@ MonoBehaviour:
   spheres: 1
   amount: 1000
   limited_lifetime: 1
-  lifetime: 300
+  lifetime: 150
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

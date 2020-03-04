@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spheres : MonoBehaviour
 {
@@ -28,17 +31,26 @@ public class Spheres : MonoBehaviour
             /// Run limited lifetime for spheres
             if (limited_lifetime)
             {
+
+                /// Create file to store lifetime values
+                string filename = DateTime.Now.ToString("dd-MM_hh-mm-ss") + "_lifetime_" + lifetime + ".csv";
+                StreamWriter sr = File.CreateText(filename);
+                string path = "C:\\Users\\hprc-pcl VR\\Desktop\\LimitedLifeTime\\Lifetime\\" + filename;
+
                 /// Set lifetime based on value specified
                 switch (lifetime)
                 {
                     case 150:
-                        wait_time = 0.011f;
+                        //wait_time = 0.011f;
+                        wait_time = 0.01105f;
                         break;
                     case 300:
-                        wait_time = 0.023f;
+                        //wait_time = 0.023f;
+                        wait_time = 0.0223f;
                         break;
                     case 600:
-                        wait_time = 0.055f;
+                        //wait_time = 0.055f;
+                        wait_time = 0.0555f;
                         break;
                     default:
                         wait_time = 0;
@@ -48,15 +60,16 @@ public class Spheres : MonoBehaviour
                 /// If valid lifetime value is specified, run coroutine to implement limited lifetime 
                 if (wait_time>0)
                 {
-                    StartCoroutine("BlinkSpheres");
-                }               
+                    StartCoroutine(BlinkSpheres(path));
+                }
+                   
             }
             
         }
     }
 
-    private IEnumerator BlinkSpheres()
-    {
+    private IEnumerator BlinkSpheres(String path)
+    {   
         /// Run until manual interruption
         while (true)
         {
@@ -84,7 +97,11 @@ public class Spheres : MonoBehaviour
             {
                 diff = diff + 1000;
             }
-            Debug.Log(diff);
+
+            //Debug.Log(diff);
+            StreamWriter writer = new StreamWriter(path, true);
+            writer.WriteLine(diff);
+            writer.Close();
         }
     }
 
