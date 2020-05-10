@@ -14,10 +14,10 @@ public class Rods : MonoBehaviour
         {
             for (int j = 0; j < z_position.Length; j++)
             {
-                Instantiate(Rod, new Vector3(10.0f, 0, z_position[j]), Quaternion.identity);
-                Instantiate(Rod, new Vector3(10.0f, 0, -z_position[j]), Quaternion.identity);
-                Instantiate(Rod, new Vector3(-10.0f, 0, z_position[j]), Quaternion.identity);
-                Instantiate(Rod, new Vector3(-10.0f, 0, -z_position[j]), Quaternion.identity);
+                Instantiate(Rod, new Vector3(10.0f, 4, z_position[j]), Quaternion.identity);
+                Instantiate(Rod, new Vector3(10.0f, 4, -z_position[j]), Quaternion.identity);
+                Instantiate(Rod, new Vector3(-10.0f, 4, z_position[j]), Quaternion.identity);
+                Instantiate(Rod, new Vector3(-10.0f, 4, -z_position[j]), Quaternion.identity);
             }
         }
     }
