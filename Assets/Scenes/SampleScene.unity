@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rod: {fileID: 1764799527697764759, guid: d48982ca623411649a6385b55fea53fd, type: 3}
-  rods: 0
+  rods: 1
 --- !u!4 &1906154990
 Transform:
   m_ObjectHideFlags: 0
