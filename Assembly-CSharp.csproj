@@ -62,8 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DistTracker.cs" />
+    <Compile Include="Assets\MoveSine.cs" />
     <Compile Include="Assets\Rods.cs" />
     <Compile Include="Assets\Spheres.cs" />
+    <Compile Include="Assets\Tracker.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Unity/abstract-scene/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

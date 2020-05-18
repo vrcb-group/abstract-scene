@@ -6,13 +6,19 @@ public class Spheres : MonoBehaviour
 {
     public GameObject Sphere;
     public bool spheres = true;
+    public bool oscillate = true;
     public int amount = 2000;
+
+    public float amplitude;
+    private float time_period = 2;
+
     List<GameObject> spherePool;
 
     void Start()
     {
-        if(spheres)
+        if (spheres)
         {
+            //Sphere.tag = "osc";
             spherePool = new List<GameObject>();
             for (int i = 0; i < amount; i++)
             {
@@ -20,26 +26,19 @@ public class Spheres : MonoBehaviour
                 sp.SetActive(true);
                 spherePool.Add(sp);
             }
-            //StartCoroutine("BlinkSpheres");
         }
     }
 
-    //private IEnumerator BlinkSpheres()
-    //{
-    //    while(true)
-    //    {
-    //        for (int i = 0; i < 20; i++)
-    //        {
-    //            for (int j = i*(amount/20); j < (i+1)*(amount/20); j++)
-    //            {
-    //                spherePool[j].SetActive(false);
-    //                spherePool[j].transform.position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-11.0f, 15.0f), Random.Range(-10.0f, 10.0f));
-    //                spherePool[j].SetActive(true);
-    //            }
-    //            //Debug.Log(System.DateTime.Now);
-    //            yield return new WaitForSeconds(0.01f);
-    //        }   
-    //    }
-    //}
+    void FixedUpdate()
+    {
+        if (oscillate)
+        {
+            foreach (GameObject sp in spherePool)
+            {
+                sp.transform.position = sp.transform.position + new Vector3(Mathf.Sin(((Mathf.PI * 2) / time_period) * Time.time) * amplitude, 0.0f, 0.0f);
+            }
+            
+        }
+    }
 
 }
