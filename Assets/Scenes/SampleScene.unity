@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e58fe14afaec8a4fb70fe745a94e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.1
+  amplitude: 0.001
 --- !u!4 &383949477
 Transform:
   m_ObjectHideFlags: 0
@@ -222,9 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sphere: {fileID: 220943525610379377, guid: 762108d4860be374e9c07bac751561e0, type: 3}
   spheres: 1
-  oscillate: 1
   amount: 2000
-  amplitude: 0.1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,8 +350,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rod: {fileID: 1764799527697764759, guid: d48982ca623411649a6385b55fea53fd, type: 3}
   rods: 1
-  oscillate: 1
-  amplitude: 0.1
 --- !u!4 &1906154990
 Transform:
   m_ObjectHideFlags: 0

@@ -31,13 +31,13 @@ public class DistTracker : MonoBehaviour
     {
         //Debug.Log(transform.position.x);
 
-        float xpos = transform.position.x;
+        //float xpos = transform.position.x;
         //float ypos = transform.position.y;
-        //float zpos = transform.position.z;
+        float zpos = transform.position.z;
         
         t = Time.time - startTime;
-        var line = t + "," + xpos;
-        //var line = t + "," + zpos;
+        //var line = t + "," + xpos;
+        var line = t + "," + zpos;
 
         StreamWriter writer1 = new StreamWriter(path, true);
         
