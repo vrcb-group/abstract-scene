@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 383949475}
   m_Layer: 0
   m_Name: Tracker
-  m_TagString: Untagged
+  m_TagString: obj_tracking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383949474}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1bf3e0f2406c4f468f0f2b9d8234ded, type: 3}
   m_Name: 
@@ -162,7 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e58fe14afaec8a4fb70fe745a94e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.001
+  amplitude: 0.005
+  ML: 1
+  AP: 0
 --- !u!4 &383949477
 Transform:
   m_ObjectHideFlags: 0
@@ -314,7 +316,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34d8c9ba0d77dbc40b3ecd312bf077fe, type: 3}
   m_Name: 
