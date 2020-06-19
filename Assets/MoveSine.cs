@@ -19,6 +19,7 @@ public class MoveSine : MonoBehaviour
 
     // output file
     private String res_file = DateTime.Now.ToString("dd-MM_hh-mm-ss") + "_POS.csv";
+    String desktop_path;
     String file_path;
 
     // record resp
@@ -26,7 +27,7 @@ public class MoveSine : MonoBehaviour
     private float xpos, ypos, zpos;
 
     // record stim
-    GameObject empty;
+    GameObject tracker_obj;
     Transform tracker;
     private float tracker_xpos, tracker_ypos, tracker_zpos;
 
@@ -41,11 +42,22 @@ public class MoveSine : MonoBehaviour
         // create output file
         StreamWriter sr_pos = File.CreateText(res_file);
         file_path = "C:\\Users\\hprc-pcl VR\\Desktop\\CamTracker_Abstract\\" + res_file;
+        //desktop_path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        //file_path = desktop_path + "\\" + res_file;
+        //Debug.Log(file_path);
 
-        // track empty object for stim
-        empty = GameObject.FindWithTag("obj_tracking");
-        tracker = empty.transform;
-
+        // track tracker object for stim signal
+        tracker_obj = GameObject.FindWithTag("obj_tracking");
+        if (tracker_obj == null)
+        {
+            Debug.Log("Tracker object is disabled / not found");
+        }
+        else
+        {
+            Debug.Log("Tracker object found");
+            tracker = tracker_obj.transform;
+        }           
+ 
         startTime = Time.time;
     }
 
@@ -61,8 +73,7 @@ public class MoveSine : MonoBehaviour
             transform.position = _startPosition + new Vector3(0.0f, 0.0f, Mathf.Sin(((Mathf.PI * 2) / time_period) * Time.time) * amplitude);
         }
 
-
-        if (this.gameObject.tag == "obj_tracking")
+        if (this.gameObject.tag == "obj_tracking" && tracker_obj != null)
         {
             trackpos(file_path);
         }

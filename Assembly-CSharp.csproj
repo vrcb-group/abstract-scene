@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DistTracker.cs" />
+    <Compile Include="Assets\MoveFloor.cs" />
     <Compile Include="Assets\MoveSine.cs" />
     <Compile Include="Assets\Rods.cs" />
     <Compile Include="Assets\Spheres.cs" />
